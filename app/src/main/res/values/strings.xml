@@ -9,4 +9,14 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string-array name="packages">
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Breakfast</item>
+        <item>Snacks</item>
+        <item>Student meal</item>
+        <item>Child meal</item>
+
+    </string-array>
 </resources>

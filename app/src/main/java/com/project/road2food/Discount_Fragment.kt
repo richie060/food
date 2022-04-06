@@ -1,4 +1,6 @@
 package com.project.road2food
 
-class Discount_Fragment {
+import androidx.fragment.app.Fragment
+
+class Discount_Fragment: Fragment(R.layout.fragment_offers) {
 }
