@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val map = Map_fragment()
         val discount = Discount_Fragment()
 
-        setCurrentFragment(map)
+        setCurrentFragment(home)
 
         bottom_navigation.setOnItemSelectedListener {
             when(it.itemId){
