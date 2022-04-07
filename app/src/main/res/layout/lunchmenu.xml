@@ -39,45 +39,134 @@
                 android:rating="4.5" />
         </RelativeLayout>
     </LinearLayout>
-
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        >
+    <TableRow
+        android:background="@color/white"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_weight="1"
+            android:text="Mon - Fri"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10:30 - 17:30"
+            />
+    </TableRow>
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
             <TextView
-                android:id="@+id/mondfri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mon-Fri"
-                android:textColor="#000"
-                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="Saturday"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="saturday"
-                android:textColor="#000"
-                android:layout_marginTop="30dp"
-                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="11:30 - 15:00"
                 />
+        </TableRow>
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Sunday"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginTop="60dp"
                 />
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Closed"
+                />
+        </TableRow>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/red"
+            />
 
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lunch"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10,30€"
+                />
+        </TableRow>
 
-    </LinearLayout>
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Student Lunch"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2,70€"
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salad"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9,70€"
+                />
+        </TableRow>
+        <TableRow
+            android:background="@color/white"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Coffee"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1,00 €"
+                />
+        </TableRow>
+
+    </TableLayout>
+
 
 
 

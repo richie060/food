@@ -90,8 +90,6 @@ class Home: Fragment() {
 
         val button = view.findViewById<Button>(R.id.spinner)
 
-
-
         val popupMenu: PopupMenu = PopupMenu(context,button)
         popupMenu.menuInflater.inflate(R.menu.food_menu,popupMenu.menu)
         popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
