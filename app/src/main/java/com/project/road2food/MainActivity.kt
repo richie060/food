@@ -1,5 +1,6 @@
 package com.project.road2food
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val map = Map_fragment()
         val discount = Discount_Fragment()
 
-        setCurrentFragment(home)
+        setCurrentFragment(map)
 
         bottom_navigation.setOnItemSelectedListener {
             when(it.itemId){
