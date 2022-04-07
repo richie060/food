@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="30dp"
     android:background="@color/red"
     >
     <LinearLayout
@@ -199,7 +200,31 @@
             android:text="Kirkkokatu 15, 90100 Oulu"/>
 
     </LinearLayout>
-
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TableRow
+                android:background="@color/white"
+                android:padding="10dp">
+                <Button
+                    android:id="@+id/btnmap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="See at map"
+                    />
+                <Button
+                    android:id="@+id/btnoffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="Todays Offer"
+                    />
+            </TableRow>
+        </TableLayout>
 
 
     </LinearLayout>

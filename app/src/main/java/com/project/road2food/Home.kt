@@ -84,55 +84,47 @@ class Home: Fragment() {
     ): View? {
 
 
-        val view = inflater.inflate(R.layout.fragment_home, container,false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
         val btnmap = view.findViewById<Button>(R.id.btnmap)
         val btnoffers = view.findViewById<Button>(R.id.btnoffers)
 
+
+
         val button = view.findViewById<Button>(R.id.spinner)
 
-        val popupMenu: PopupMenu = PopupMenu(context,button)
-        popupMenu.menuInflater.inflate(R.menu.food_menu,popupMenu.menu)
-        popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
-            when(item.itemId) {
-                R.id.itDinner -> {
-                    val lunchmenu = Lunch_menu()
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(R.id.fragment_contain, lunchmenu)
-                    transaction.commit()
-                }
-                R.id.itlunch -> {
-                    val lunchmenu = Lunch_menu()
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(R.id.fragment_contain, lunchmenu)
-                    transaction.commit()
-                }
-                R.id.itbreakfast -> {
-                    val lunchmenu = Lunch_menu()
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(R.id.fragment_contain, lunchmenu)
-                    transaction.commit()
-                }
-            }
-            true
-        })
-        popupMenu.show()
 
-        btnmap.setOnClickListener {
-            val mapfragment = Map_fragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragment_container, mapfragment)
-            transaction.commit()
+        button.setOnClickListener {
+            val popupMenu: PopupMenu = PopupMenu(context, button)
+            popupMenu.menuInflater.inflate(R.menu.food_menu, popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.itDinner -> {
+                        val lunchmenu = Lunch_menu()
+                        val transaction: FragmentTransaction =
+                            requireFragmentManager().beginTransaction()
+                        transaction.replace(R.id.fragment_contain, lunchmenu)
+                        transaction.commit()
 
-        }
-        btnoffers.setOnClickListener {
-            val offerFragment= Discount_Fragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragment_container, offerFragment)
-            transaction.commit()
+                    }
+                    R.id.itlunch -> {
+                        val lunchmenu = Lunch_menu()
+                        val transaction: FragmentTransaction =
+                            requireFragmentManager().beginTransaction()
+                        transaction.replace(R.id.fragment_contain, lunchmenu)
+                        transaction.commit()
+                    }
+                    R.id.itbreakfast -> {
+                        val lunchmenu = Lunch_menu()
+                        val transaction: FragmentTransaction =
+                            requireFragmentManager().beginTransaction()
+                        transaction.replace(R.id.fragment_contain, lunchmenu)
+                        transaction.commit()
+                    }
+                }
+                true
+            })
+            popupMenu.show()
         }
         return view
     }
-
-
-
 }
